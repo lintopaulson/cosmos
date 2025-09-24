@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Reset margins and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.navbar {
+  background: #132230;
+  color: #fff;
+  width: 100%;
+  padding: 12px 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* center the container */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* left logo & right links */
+  align-items: center;
+  width: 90%; /* or max-width: 1200px; */
+  max-width: 1200px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.club-logo {
+  height: 52px; /* Adjust per your logo height */
+  margin-right: 16px;
+}
+
+.club-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.club-name {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+}
+
+.club-location {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-top: 2px;
+  color: #c2ccd3;
+}
+
+/* Navbar-right flex */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Each nav item inline-flex for underline alignment */
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Nav link styling */
+.nav-link {
+  color: #c2ccd3;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 4px 2px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Underline */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;          /* under text */
+  left: 35%;          /* center 30% line */
+  width: 30%;         /* underline width */
+  height: 2px;
+  background-color: #c2ccd3;
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover {
+  color: #ffffff; /* text becomes white */
+}
+
+/* Show underline on hover */
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Dropdown arrow always visible */
+
+
+/* Dropdown menu */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #112130;
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  min-width: 140px;
+  border-radius: 4px;
+  z-index: 1000;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+
+.dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-link.dropdown {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px; /* main text size */
+}
+
+/* Make only the arrow smaller */
+.nav-link.dropdown::after {
+  content: ""; /* keep empty because arrow is in HTML now */
+}
+
+.nav-link.dropdown span.arrow {
+    display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;   /* half of base */
+  border-right: 6px solid transparent;  /* half of base */
+  border-top: 4px solid #c2ccd3;       /* height of triangle */
+  margin-left: 4px;                     /* spacing from text */
+  transition: transform 0.3s;
+}
+
+/* On hover, flip arrow */
+.nav-link.dropdown:hover span.arrow {
+  transform: rotate(180deg);
+}
+
+/* Base state for dropdown items */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 12px;
+  color: #c2ccd3;
+  text-decoration: none;
+  opacity: 0;                   /* hidden initially */
+  transform: translateY(10px);  /* slide from below */
+  transition: all 0.3s ease;    /* smooth animation */
+}
+
+.dropdown-menu li a.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation */
+.dropdown-container:hover .dropdown-menu li a {
+  animation: slideFadeIn 0.3s forwards;
+}
+
+
+/* Hover zoom */
+.dropdown-menu li a:hover .item-inner {
+  transform: scale(1.12);
+  color: #fff;
+}
+.item-inner {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Optional: separators between items */
+.navbar-right .nav-item + .nav-item::before {
+  content: "|";
+  color: #506077;
+  margin: 0 8px;
+}
+
+
+.nav-separator {
+  color: #506077;
+  margin: 0 8px;
+  font-size: 19px;
+}
+.hero-slider {
+  position: relative;
+  width: 100vw;
+  height: 96vh;
+  overflow: hidden;
+  font-family: "Playfair Display", serif;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  z-index: 1;
+}
+
+.hero-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+#hero-caption {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+
+.hero-gradient {
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 45%;
+  background: linear-gradient(0deg, rgba(19,34,48,0.78) 80%, rgba(19,34,48,0.05) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 58px;
+  left: 50%;
+  z-index: 3;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  width: 85vw;
+}
+
+.hero-content h1 {
+  font-size: 2.1rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: 0 0 24px 0;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.38);
+}
+
+
+
+
+.hero-btn {
+  font-size: 0.85rem;      /* slightly smaller text */
+  letter-spacing: 0.8px;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;       /* reduced padding */
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.21s;
+}
+
+
+.hero-btn:hover {
+  background: rgba(255,255,255,0.10);
+  border-color: #eee;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  width: 50px;       /* circle size */
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(19,34,48,0.26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem; /* arrow size */
+  line-height: 1;    /* remove extra vertical space */
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+
+.slider-arrow-left { left: 38px; }
+.slider-arrow-right { right: 38px; }
+
+/* Hamburger button */
+
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;          /* full height */
+  background: #132230;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center items vertically */
+  align-items: center;     /* center items horizontally */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1000;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;    /* hide interaction when inactive */
+}
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;   /* stack items vertically */
+  justify-content: center;  /* center vertically in ul */
+  align-items: center;      /* center horizontally */
+  height: 100%;             /* take full height of menu */
+  text-align: center;
+}
+.mobile-menu ul li {
+  margin: 1.5rem 0;
+  width: auto;              /* shrink to content */
+}
+.mobile-menu ul li a {
+  color: #c2ccd3;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+.mobile-menu ul li a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+
+/* Submenu */
+.mobile-menu .submenu {
+  max-height: 0;
+  overflow: visible;
+  transition: max-height 0.4s ease;
+  padding-left: 4rem;           /* increase left padding to push submenu right */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;      /* align items to left inside submenu */
+  gap: 0.3rem;                  /* smaller gap between li items */
+}
+
+/* Expand submenu with fade-in */
+.mobile-menu .has-submenu.active .submenu {
+  max-height: 500px;
+}
+
+/* Style parent links */
+.mobile-menu .has-submenu > a {
+  display: inline-flex;
+  justify-content: center; /* centers text + arrow */
+  align-items: center;
+}
+
+.mobile-menu .has-submenu > a::after {
+  content: "▼";
+  font-size: 0.8rem;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+.mobile-menu .has-submenu.active > a::after {
+  transform: rotate(180deg);
+}
+/* Submenu items fade in with slight stagger */
+.mobile-menu .submenu li {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin: 0.5rem 0;  /* reduce vertical gap */
+  width: 100%;  
+}
+
+/* When parent active, animate items in */
+.mobile-menu .has-submenu.active .submenu li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: stagger delays */
+.mobile-menu .has-submenu.active .submenu li:nth-child(1) { transition-delay: 0.05s; }
+.mobile-menu .has-submenu.active .submenu li:nth-child(2) { transition-delay: 0.1s; }
+.mobile-menu .has-submenu.active .submenu li:nth-child(3) { transition-delay: 0.15s; }
+.mobile-menu .has-submenu.active .submenu li:nth-child(4) { transition-delay: 0.2s; }
+.mobile-menu .has-submenu.active .submenu li:nth-child(5) { transition-delay: 0.25s; }
+.mobile-menu .has-submenu.active .submenu li:nth-child(6) { transition-delay: 0.3s; }
+
+/* Submenu links style */
+.mobile-menu .submenu li a {
+  color: #c2ccd3;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  text-align: left;   /* align text to left */
+  padding-left: 0; 
+}
+
+.mobile-menu .submenu li a:hover {
+  color: #fff;
+}
+
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 900px) {
+  .navbar-right {
+    display: none; /* hide desktop menu */
+  }
+  .hamburger {
+    display: flex; /* show hamburger */
+  }
+}
+
+
+
+/*OVERLAY SECTION PROPERTIES*/
+
+.overlay-menu {
+  position: relative;
+  margin: -60px auto 0 auto; /* overlays below hero */
+  width: 85vw;
+  max-width: 1270px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  padding: 32px 0;
+  z-index: 10;
+}
+
+.menu-card {
+  position: relative;
+  width: 250px;          /* adjust size */
+  height: 150px;         /* adjust size */
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: url('http://unsplash.it/1200x800') center center no-repeat;
+  background-size: cover;
+
+  transition: transform 0.3s ease;
+}
+.menu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, #1a2e40, #3b5f73);
+  opacity: 0.6;
+  z-index: 0;  /* keep it behind content */
+}
+.menu-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.menu-caption a {
+  text-decoration: none;       /* remove underline */
+  color: #c2ccd3;              /* default text color */
+  font-size: 16px;
+  transition: all 0.3s ease;   /* smooth hover */
+}
+
+.menu-caption a:hover {
+  color: #ffffff;              /* hover color */
+  transform: scale(1.05);      /* subtle zoom */
+}
+
+
+/* Responsive style */
+@media (max-width:1080px) {
+  .overlay-menu { flex-wrap: wrap; gap: 18px; }
+  .menu-card { width: 44vw; min-width: 165px; max-width: 99vw; }
+}
+@media (max-width:650px) {
+  .overlay-menu { flex-direction: column; align-items: center; padding: 22px 0;}
+  .menu-card { width: 90vw; margin-bottom: 10px;}
+}
+
+
+@media (max-width:760px) {
+  .hero-slider, .hero-slider img {
+    height: 260px;
+  }
+  .hero-content {
+    bottom: 20px;
+    width: 98vw;
+  }
+  .hero-content h1 {
+    font-size: 1.11rem;
+  }
+  .slider-arrow { font-size: 2.1rem; top: 54%; }
+  .slider-arrow-left { left: 3vw; }
+  .slider-arrow-right { right: 3vw; }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-left, .navbar-right {
+    margin-bottom: 8px;
+  }
+}

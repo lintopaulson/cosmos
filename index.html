@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos Club Chalakudy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <img src="Images/cosmos_logo.png" alt="COSMOS Club Logo" class="club-logo" />
+      <div class="club-text">
+        <span class="club-name"><b>COSMOS</b> CLUB</span>
+        <span class="club-location">CHALAKUDY, KERALA</span>
+      </div>
+    </div>
+
+    <!-- Hamburger (visible only on mobile) -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="navbar-right">
+      <div class="nav-item"><a href="#" class="nav-link">ABOUT US</a></div>
+
+      <div class="nav-item dropdown-container">
+        <a href="#" class="nav-link dropdown">AMENITIES <span class="arrow"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><span class="item-inner">LUXURY ROOMS</span></a></li>
+          <li><a href="#"><span class="item-inner">SWIMMING POOL</span></a></li>
+          <li><a href="#"><span class="item-inner">RESTAURANT & BAR</span></a></li>
+          <li><a href="#"><span class="item-inner">BANQUET, CONFERENCE</span></a></li>
+          <li><a href="#"><span class="item-inner">CHILDRENS PARK</span></a></li>
+          <li><a href="#"><span class="item-inner">BADMINTON</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-item dropdown-container">
+        <a href="#" class="nav-link dropdown">EVENTS <span class="arrow"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><span class="item-inner">EVENTS@COSMOS</span></a></li>
+          <li><a href="#"><span class="item-inner">CELEBRATIONS</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-item"><a href="#" class="nav-link">COMMITTEES</a></div>
+
+      <div class="nav-item dropdown-container">
+        <a href="#" class="nav-link dropdown">CLUB <span class="arrow"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><span class="item-inner">CONTACT US</span></a></li>
+          <li><a href="#"><span class="item-inner">AFFILIATIONS</span></a></li>
+          <li><a href="#"><span class="item-inner">MEMBERSHIP</span></a></li>
+          <li><a href="#"><span class="item-inner">GALLERIES</span></a></li>
+          <li><a href="#"><span class="item-inner">OFFICE BEARERS</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Overlay Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#">ABOUT US</a></li>
+
+    <li class="has-submenu">
+      <a href="#">AMENITIES</a>
+      <ul class="submenu">
+        <li><a href="#">LUXURY ROOMS</a></li>
+        <li><a href="#">SWIMMING POOL</a></li>
+        <li><a href="#">RESTAURANT & BAR</a></li>
+        <li><a href="#">BANQUET, CONFERENCE</a></li>
+        <li><a href="#">CHILDRENS PARK</a></li>
+        <li><a href="#">BADMINTON</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu">
+      <a href="#">EVENTS</a>
+      <ul class="submenu">
+        <li><a href="#">EVENTS@COSMOS</a></li>
+        <li><a href="#">CELEBRATIONS</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">COMMITTEES</a></li>
+
+    <li class="has-submenu">
+      <a href="#">CLUB</a>
+      <ul class="submenu">
+        <li><a href="#">CONTACT US</a></li>
+        <li><a href="#">AFFILIATIONS</a></li>
+        <li><a href="#">MEMBERSHIP</a></li>
+        <li><a href="#">GALLERIES</a></li>
+        <li><a href="#">OFFICE BEARERS</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<div class="hero-slider">
+    <img id="hero-img-1" class="hero-img active" src="Images/slide1.jpeg" alt="">
+  <img id="hero-img-2" class="hero-img" src="Images/slide2.jpeg" alt="">
+  <img id="hero-img-3" class="hero-img" src="Images/slide3.jpeg" alt="">
+  <div class="hero-gradient"></div>
+  <div class="hero-content">
+    <h1 id="hero-caption">EXCELLENT AMENITIES, BEAUTIFUL SURROUNDINGS</h1>
+    <button class="hero-btn">LEARN MORE <span>&#10095;</span></button>
+  </div>
+  <div class="slider-arrow slider-arrow-left" onclick="prevSlide()">&#10094;</div>
+  <div class="slider-arrow slider-arrow-right" onclick="nextSlide()">&#10095;</div> 
+</div>
+
+
+
+ 
+
+
+<script src="script.js"></script>
+</body>
+</html>
