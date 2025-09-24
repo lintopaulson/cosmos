@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos Club Chalakudy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <img src="Images/cosmos_logo.png" alt="COSMOS Club Logo" class="club-logo" />
+      <div class="club-text">
+        <span class="club-name"><b>COSMOS</b> CLUB</span>
+        <span class="club-location">CHALAKUDY, KERALA</span>
+      </div>
+    </div>
+
+    <!-- Hamburger (visible only on mobile) -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="navbar-right">
+      <div class="nav-item"><a href="#" class="nav-link">ABOUT US</a></div>
+
+      <div class="nav-item dropdown-container">
+        <a href="#" class="nav-link dropdown">AMENITIES <span class="arrow"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><span class="item-inner">LUXURY ROOMS</span></a></li>
+          <li><a href="#"><span class="item-inner">SWIMMING POOL</span></a></li>
+          <li><a href="#"><span class="item-inner">RESTAURANT & BAR</span></a></li>
+          <li><a href="#"><span class="item-inner">BANQUET, CONFERENCE</span></a></li>
+          <li><a href="#"><span class="item-inner">CHILDRENS PARK</span></a></li>
+          <li><a href="#"><span class="item-inner">BADMINTON</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-item dropdown-container">
+        <a href="#" class="nav-link dropdown">EVENTS <span class="arrow"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><span class="item-inner">EVENTS@COSMOS</span></a></li>
+          <li><a href="#"><span class="item-inner">CELEBRATIONS</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-item"><a href="#" class="nav-link">COMMITTEES</a></div>
+
+      <div class="nav-item dropdown-container">
+        <a href="#" class="nav-link dropdown">CLUB <span class="arrow"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><span class="item-inner">CONTACT US</span></a></li>
+          <li><a href="#"><span class="item-inner">AFFILIATIONS</span></a></li>
+          <li><a href="#"><span class="item-inner">MEMBERSHIP</span></a></li>
+          <li><a href="#"><span class="item-inner">GALLERIES</span></a></li>
+          <li><a href="#"><span class="item-inner">OFFICE BEARERS</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Overlay Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#">ABOUT US</a></li>
+
+    <li class="has-submenu">
+      <a href="#">AMENITIES</a>
+      <ul class="submenu">
+        <li><a href="#">LUXURY ROOMS</a></li>
+        <li><a href="#">SWIMMING POOL</a></li>
+        <li><a href="#">RESTAURANT & BAR</a></li>
+        <li><a href="#">BANQUET, CONFERENCE</a></li>
+        <li><a href="#">CHILDRENS PARK</a></li>
+        <li><a href="#">BADMINTON</a></li>
+      </ul>
+    </li>
+
+    <li class="has-submenu">
+      <a href="#">EVENTS</a>
+      <ul class="submenu">
+        <li><a href="#">EVENTS@COSMOS</a></li>
+        <li><a href="#">CELEBRATIONS</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">COMMITTEES</a></li>
+
+    <li class="has-submenu">
+      <a href="#">CLUB</a>
+      <ul class="submenu">
+        <li><a href="#">CONTACT US</a></li>
+        <li><a href="#">AFFILIATIONS</a></li>
+        <li><a href="#">MEMBERSHIP</a></li>
+        <li><a href="#">GALLERIES</a></li>
+        <li><a href="#">OFFICE BEARERS</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<div class="hero-slider">
+    <img id="hero-img-1" class="hero-img active" src="Images/slide1.jpeg" alt="">
+  <img id="hero-img-2" class="hero-img" src="Images/slide2.jpeg" alt="">
+  <img id="hero-img-3" class="hero-img" src="Images/slide3.jpeg" alt="">
+  <div class="hero-gradient"></div>
+  <div class="hero-content">
+    <h1 id="hero-caption">BEAUTIFUL SURROUNDINGS</h1>
+    <button class="hero-btn">LEARN MORE <span>&#10095;</span></button>
+  </div>
+  <div class="slider-arrow slider-arrow-left" onclick="prevSlide()">&#10094;</div>
+  <div class="slider-arrow slider-arrow-right" onclick="nextSlide()">&#10095;</div> 
+</div>
+
+<!-- INTRO SECTION -->
+<section class="intro-section">
+  <div class="intro-content">
+    <p>
+      Cosmos Club is located in the heart of Chalakudy, just a short drive from major city hubs and easily accessible from the airport. Spread across expansive, lush landscapes, the club offers top-notch amenities and hosts a variety of events throughout the year, making it one of the premier family and recreational clubs in the region.
+    
+    </p>
+  </div>
+</section>
+
+<!-- PRESIDENT MESSAGE -->
+<section class="president-message-section">
+  <div class="pm-container">
+    <div class="pm-text">
+      <h2>President's Message</h2>
+      <p>
+        I am honoured to serve as the president of Cosmos Club, a vibrant space where members come together to connect, learn, and grow. Cosmos Club is a dynamic community that thrives on the enthusiasm and participation of its members. Whether you visit frequently or occasionally, our club offers a welcoming environment to explore new interests, develop skills, and build meaningful connections.
+      </p>
+      <p>
+        I encourage you to actively participate in our events and activities, share your ideas, and engage in our discussions. Together, let’s make Cosmos Club a hub of creativity, learning, and camaraderie. I am excited about the future of our club and look forward to working with each of you to make it a memorable and rewarding experience.
+      </p>
+      <p>
+        Best regards,<br>
+        Adv. Arun CB, President
+      </p>
+    </div>
+    <div class="pm-image">
+      <img src="Images/ARUN.jpg" alt="President">
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES SECTION -->
+<section class="facilities-section">
+  <h2 class="facilities-title">AMENITIES</h2>
+  <div class="facilities-grid">
+    
+    <div class="facility-card2">
+      <img src="Images/suiteroom.png" alt="Convention Halls">
+      <div class="facility-card2-body">
+        <h3>LUXURY ROOM</h3>
+        <p>Comfortable rooms with all amenities to make your stay pleasant and relaxing.</p>
+        <a href="#" class="facility-link">View More <span>&#10095;</span></a>
+      </div>
+    </div>
+    
+    <div class="facility-card2">
+      <img src="Images/slide3.jpeg" alt="A/C & NON-A/C Permit Rooms">
+      <div class="facility-card2-body">
+        <h3>SWIMMING POOL</h3>
+        <p>A well-maintained pool offering the perfect place to unwind, refresh, and enjoy your leisure time.</p>
+        <a href="#" class="facility-link">View More <span>&#10095;</span></a>
+      </div>
+    </div>
+    
+    <div class="facility-card2">
+      <img src="Images/slide4.jpeg" alt="Game Courts">
+      <div class="facility-card2-body">
+        <h3>GAME COURTS</h3>
+        <p>Well-maintained courts for a variety of indoor and outdoor games.</p>
+        <a href="#" class="facility-link">View More <span>&#10095;</span></a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- AFFILIATED CLUB -->
+<section class="affiliate-banner">
+  <div class="affiliate-banner-inner">
+    <div class="affiliate-left">
+      <div class="affiliate-count">
+        <span class="count-big">50+</span>
+        <div class="count-label">Affiliated Clubs</div>
+      </div>
+    </div>
+    <div class="affiliate-right">
+      <div class="affiliate-desc">
+        We have a rapidly expanding network of affiliated clubs spread throughout Kerala and beyond, fostering a vibrant community. Our clubs offer a variety of activities and amenities, ensuring that members can enjoy a rich and fulfilling experience, wherever they are located.
+      </div>
+      <a href="#" class="affiliate-btn">List of Clubs &nbsp; &gt;&gt;&gt;</a>
+    </div>
+  </div>
+  <div class="affiliate-img-row">
+    <img src="Images/vector.png" alt="Affiliated clubs illustration" class="affiliate-illustration">
+  </div>
+</section>
+
+<!-- AFFILIATED CLUB -->
+<section class="club-chronicles">
+  <div class="cc-header">
+    <h2>Club Chronicles</h2>
+    <div class="cc-subtitle">Latest Events</div>
+  </div>
+  <hr class="cc-divider" />
+  <div class="cc-event-card">
+     <div class="cc-event-image-wrap">
+    <img src="Images/basketball.jpeg" alt="Badminton Court" class="cc-event-image" />
+  </div>
+    <div class="cc-event-details">
+      <div class="cc-event-title-date">
+        <h3>Inter Club Badminton Tournament</h3>
+        <div class="cc-date-card">
+          <div class="cc-date-month">MAY</div>
+          <div class="cc-date-day">1</div>
+        </div>
+      </div>
+      <hr class="cc-event-divider" />
+      <div class="cc-event-desc">
+        Our club is currently hosting an exciting inter-club badminton tournament, bringing together players from badminton clubs. The event is filled with friendly competition, great sportsmanship, and a strong sense of community. It is a wonderful opportunity for players to connect, compete, and celebrate the spirit of the game.
+      </div>
+    </div>
+  </div>
+  <hr class="cc-divider" />
+</section>
+
+<!-- FOOTER SECTION -->
+<footer class="footer-section">
+  <div class="footer-top">
+    <h3 class="footer-title">Quick links</h3>
+    <div class="footer-links-row">
+      <div class="footer-col">
+        <h4>AMENITIES</h4>
+        <ul>
+          <li>Order Food</li>
+          <li>Order Alcoholic Beverage</li>
+          <li>Rooms Reservation</li>
+          <li>Quote For Hosting Events</li>
+          <li>Pay For Club Services</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>EVENTS</h4>
+        <ul>
+          <li>Events @ Cosmos</li>
+          <li>Culturals Nights, Forum</li>
+          <li>Club Day & New Year</li>
+          <li>Ladies Forum</li>
+          <li>Philanthropy</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CLUB</h4>
+        <ul>
+          <li>Contact Us</li>
+          <li>Affiliations</li>
+          <li>Membership</li>
+          <li>Tours & Galleries</li>
+          <li>Office Bearers</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>OTHER FACILITIES</h4>
+        <ul>
+          <li>Swimming Pool</li>
+          <li>Badminton</li>
+          <li>Indoor Games, Movies</li>
+          <li>Fitness center, Jogging</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-grid">
+      <div class="footer-map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.324590310881!2d76.32450157451194!3d10.315886967520676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08027ae558991d%3A0x6d8f015395ce042a!2sCosmos%20Club!5e0!3m2!1sen!2sin!4v1758733912473!5m2!1sen!2sin"
+    allowfullscreen=""
+    width="260px"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    class="footer-map-iframe">
+  </iframe>
+</div>
+
+      <div class="footer-club-info">
+        <img src="Images/cosmos_logo.png" alt="COSMOS Club" class="footer-logo" />
+        <div class="footer-club-head">Club Timings</div>
+        <div class="footer-club-text">Mon - Fri 10:00 - 21:00<br>Weekend 12:00 - 21:00</div>
+        <div class="footer-club-head">Address</div>
+        <div class="footer-club-text">
+          Cosmos Club, Near, Potta Rd, NH Bye Pass,<br>
+           Chalakudy, Kerala 680307
+        </div>
+        <a href="#" class="footer-more-info">MORE INFO &nbsp;&rarr;</a>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-title">Membership Co-ordinator</div>
+        <div>+91 95443 93335</div>
+        <div class="footer-contact-title">CEO</div>
+        <div>+91 95443 43335</div>
+        <div class="footer-contact-title">Office</div>
+        <div>+91 95442 83335</div>
+        <div class="footer-contact-title">E-mail:</div>
+        <div>info@cosmosclub.in</div>
+        <div class="footer-policy">
+          Privacy Policy Terms & Conditions<br>
+          &copy; 2025 COSMOS Club
+        </div>
+        <div class="footer-social-row">
+          <span class="footer-icon"><i class="fab fa-instagram"></i></span>
+          <span class="footer-icon"><i class="fab fa-facebook"></i></span>
+          <span class="footer-icon"><i class="fab fa-twitter"></i></span>
+        </div>
+      <div class="footer-powered-by">
+  Website Design Powered By<br>
+  <a href="https://lpdigital.com" target="_blank" class="lp-digital-link">LP DIGITAL</a>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+ 
+
+<script src="https://kit.fontawesome.com/0eb6e1343c.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
