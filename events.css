@@ -1,0 +1,186 @@
+:root {
+  --dark: #14183a;
+  --light: #f7f2e9;
+  --accent: #ddb97c;
+  --success: #00c37a;
+  --muted: #ddd;
+}
+
+.event-timeline {
+  background: var(--light);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.timeline-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #4a001f;
+  font-family: 'Poppins', sans-serif;
+}
+
+.timeline-subtitle {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #4a001f;
+}
+
+.progress-section {
+  margin-bottom: 60px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  background: #eee;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 8px;
+  width: 0%;
+  background: var(--accent);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 60px auto;
+  
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #e2e2e2;
+  transform: translateX(-50%);
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.line-fill {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 0;
+  background: var(--accent);
+  transform: translateX(-50%);
+  transition: height 1.2s ease-in-out;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  margin: 100px 0; /* space between items */
+  
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%; /* center dot vertically */
+  transform: translate(-50%, -50%); /* adjust for vertical center */
+}
+
+.timeline-dot.completed {
+  background: var(--success);
+}
+
+.timeline-dot.completed::after {
+  content: "✓";
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  top: 0; /* slightly downward if needed */
+}
+
+/* Card */
+.timeline-content {
+  width: 45%;
+  padding: 25px 30px;
+  background: fff8ef;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  position: relative;
+  top: -50%; /* shift card vertically to align with dot */
+  color: #4a001f;
+  
+}
+
+/* Desktop view */
+.timeline-content.left {
+  text-align: right;
+  left: calc(50% - 35px - 45%); /* 35px offset from timeline */
+}
+
+.timeline-content.right {
+  text-align: left;
+  left: calc(50% + 35px); /* 35px offset from timeline */
+}
+
+
+.event-date {
+  display: block;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-content {
+    width: 90%;
+    left: 0 !important;
+    text-align: left !important;
+    margin-left: 50px;
+    top: 0 !important;
+  }
+
+  .line, .line-fill {
+    left: 25px;
+    transform: none;
+  }
+
+  .timeline-dot {
+    left: 17px; /* same as timeline line */
+    top: 50%;   /* vertical center relative to card */
+    transform: translateY(-50%); /* perfectly centered */
+  }
+
+  .timeline-dot.completed::after {
+    top: 0; /* tick is centered inside dot */
+  }
+}
+

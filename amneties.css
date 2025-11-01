@@ -1,0 +1,326 @@
+/* ----------------------- GLOBAL ----------------------- */
+body {
+  background: #f7f2e9;
+  color: #4a001f;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 1280px; /* same as your other sections */
+  margin: 0 auto;
+  padding: 0 20px; /* optional horizontal padding for small screens */
+  box-sizing: border-box;
+}
+
+
+/* ----------------------- HERO ----------------------- */
+.facilities-hero {
+  position: relative;
+  background: url('Images/amneties.jpeg') center/cover no-repeat;
+  border-radius: 12px;
+  margin: 0px auto 0 auto;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 2px 18px rgba(32, 4, 38, 0.07);
+}
+
+.facilities-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 24, 58, 0.55);
+  z-index: 1;
+}
+
+.facilities-hero-inner {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  border-radius: 12px;
+  padding: 32px 22px 22px 22px;
+  text-align: center;
+  color: #fff;
+  max-width: 760px;
+  width: 100%;
+}
+
+.facilities-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.facilities-hero p {
+  font-size: 1rem;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+
+
+.inquire-btn {
+  background: #4a001f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 20px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.inquire-btn:hover {
+  background: #7b2342;
+  transform: scale(1.05);
+}
+
+/* ----------------------- TITLES ----------------------- */
+.facilities-title,
+.section-title {
+  text-align: center;
+  color: #3b0020;
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.01em;
+  margin: 64px auto 32px auto;
+  max-width: 1180px;
+  line-height: 1.3;
+  position: relative;
+  padding: 0 10px;
+}
+
+.facilities-title::after,
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #cfa052;
+  margin: 12px auto 0;
+  border-radius: 1px;
+}
+
+/* ----------------------- ACCORDION ----------------------- */
+.facilities-accordion {
+  max-width: 1180px;
+  margin: 0 auto 80px auto;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #dbc4b4;
+}
+
+.accordion-title {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  color: #4a001f;
+  font-size: 1.04rem;
+  font-weight: 600;
+  padding: 18px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.1s;
+}
+
+.accordion-title ion-icon {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+  color: #4a001f;
+}
+
+.accordion-title.active ion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 4px 0 12px 0;
+  font-size: 0.98rem;
+  color: #623058;
+  display: none;
+  line-height: 1.5;
+}
+
+/* ----------------------- EXTRA FACILITIES / CARDS ----------------------- */
+.facilities-extra {
+  background: #f7f2e9;
+  color: #4a001f;
+  padding: 64px 20px 80px;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.info-card {
+  background: #f7f2e9;
+  box-shadow: 0 4px 14px rgba(160, 120, 80, 0.18);
+  border-radius: 12px;
+  padding: 20px 20px 24px;
+  flex: 1 1 320px;
+  max-width: 360px;
+  min-width: 280px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(80, 50, 20, 0.25);
+}
+
+.info-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.info-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4a001f;
+}
+
+.info-card p {
+  font-weight: 400;
+  font-size: 0.98rem;
+  color: #6a4f52;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ----------------------- SMALL CARDS WITH ICONS ----------------------- */
+/* Ensure container aligns with hero and other sections */
+.container {
+  max-width: 1180px;   /* same as hero/sections */
+  margin: 0 auto;
+  padding: 0 20px;     /* consistent side padding */
+  box-sizing: border-box;
+}
+
+/* Small cards row */
+.small-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+/* Small cards individual */
+.small-cards .info-card {
+  background: #f7f2e9;
+  max-width: 1360px;       /* same as other cards */
+  flex: 1 1 320px;        /* responsive */
+  text-align: center;
+  padding: 36px 28px 38px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(160, 120, 80, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.small-cards .info-card i {
+  font-size: 4.5rem;
+  margin-bottom: 18px;
+  color: #2e755f;
+}
+
+
+.small-cards .info-card:hover i {
+  transform: scale(1.1);
+}
+
+.small-cards .info-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.small-cards .info-card p {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #6a4f52;
+  margin: 0;
+}
+
+/* ----------------------- TEXT LIST ----------------------- */
+.text-list {
+  max-width: 1180px;
+  margin: 0 auto 56px auto;
+  text-align: left;
+  line-height: 1.55;
+}
+
+.text-list-item {
+  margin-bottom: 18px;
+}
+
+.text-list-item strong {
+  font-weight: 700;
+  color: #2d0b2f;
+}
+
+.text-list-item p {
+  margin: 6px 0 12px 0;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: #6a4f52;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.text-list-item p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  background: #cfa052;
+  margin: 10px 0 0 0;
+  border-radius: 0.5px;
+}
+
+/* ----------------------- RESPONSIVE ----------------------- */
+@media (max-width: 1000px) {
+  .facilities-hero { height: 280px; }
+  .section-title,
+  .facilities-title { font-size: 1.45rem; margin-bottom: 36px; }
+  .card-row { gap: 24px; }
+  .info-card, .small-cards .info-card { max-width: 95%; padding: 30px 20px; }
+  .small-cards .info-card i { font-size: 4rem; margin-bottom: 16px; }
+  .text-list { max-width: 95vw; }
+}
+
+@media (max-width: 600px) {
+  .facilities-hero { height: 230px; }
+  .facilities-hero-inner { padding: 16px 10px; font-size: 0.89rem; }
+  .section-title,
+  .facilities-title { font-size: 1.25rem; margin-bottom: 28px; }
+  .card-row { gap: 20px; }
+  .small-cards .info-card { width: 100%; padding: 28px 16px; }
+  .small-cards .info-card i { font-size: 3.6rem; }
+}
